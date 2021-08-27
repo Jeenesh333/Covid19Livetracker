@@ -1,0 +1,120 @@
+body{
+  margin-top: -18px;
+  background-color:#2a3642;
+  height: 99.5vh;
+
+}
+.heading{
+  color: aliceblue;
+  text-align: center;
+  justify-content: center;
+}
+.covid{
+  font-size: 2rem;
+  font-style: oblique;
+  font-weight: bold;
+}
+.live{
+  color: rgb(255, 255, 255);
+  animation: animate 2.0s linear infinite;
+}
+@keyframes animate {
+  0% {
+      opacity: 0;
+  }
+  30% {
+      opacity: 0.3;
+  }
+
+  50% {
+      opacity: 0.6;
+  }
+
+  70% {
+      opacity: 0.8;
+  }
+
+  100% {
+      opacity: 0;
+  }
+
+  70% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 0.5;
+  }
+
+}
+.no_bullets{
+  list-style-type: none;
+  display: flex;
+  flex-flow: column wrap;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  margin: 30px 20px;
+}
+
+
+.card::before,
+.card::after {
+  content: "";
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+}
+
+.card::before,
+.card::after,
+.card .card-inner {
+  background-color: #423F3E;
+  border: 1px solid #01937C;
+  transition: transform 0.5s;
+}
+
+.card::before,
+.card-inner {
+  z-index: 1;
+}
+
+.card-inner {
+  position:relative;
+  text-align: center;
+  padding: 2rem;
+}
+.card_content{
+  color:whitesmoke;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-shadow: 3px 3px 5px  black;
+}
+.card_detail{
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-shadow: 2px 2px 6px black;
+}
+
+/* Position the stacked cards in 
+different position */
+.cards:hover {
+  transform: translate(5px, 5px);
+}
+
+.cards:hover::before {
+  transform: translate(-5px, -5px);
+}
+
+.cards:hover::after {
+  transform: translate(-10px, -10px);
+}
